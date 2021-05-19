@@ -1,4 +1,5 @@
 
+
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
@@ -58,6 +59,7 @@ class _ImageWidgetAppState extends State<ImageWidgetApp> {
            icon: Icon(Icons.menu),
            onPressed: (){print('버튼클릭');},
          )
+
          ],
 
 
@@ -70,7 +72,11 @@ class _ImageWidgetAppState extends State<ImageWidgetApp> {
        // ),
 
       ), drawer: Drawer(
-          child: Text('기능미구현중 21_05_18'),
+          child: Column(
+            children: [Text('기능 미구현중 빠른시일내로하겠습니다. \n'),
+                       Text('2021년5월19일')],
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
     ), //애가있어야 actions에서 아이콘도생기고 옆으로도움직여짐
 
       floatingActionButton: FloatingActionButton(
@@ -91,7 +97,7 @@ class _ImageWidgetAppState extends State<ImageWidgetApp> {
 
                 padding: EdgeInsets.only(bottom: 30),
 
-                child : Image.asset('image/oohana.png',width: 200, height: 200, fit: BoxFit.fill,),
+                child : Image.asset('image/kotlin.png',width: 200, height: 200, fit: BoxFit.fill,),
               ),
 
               Padding(
