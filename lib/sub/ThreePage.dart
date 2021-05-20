@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import '../member.dart';
 
 class ThreeApp extends StatelessWidget {
-  const ThreeApp({Key key}) : super(key: key);
 
+
+
+  
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('여기도 공사중!'),
+        title: Text('페이지 공사중'),
       ),
       body: Container(
         child: Center(

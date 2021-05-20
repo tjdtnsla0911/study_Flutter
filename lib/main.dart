@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'imageWidget.dart';
 import 'sub/secondPage.dart';
 import 'sub/ThreePage.dart';
-import 'member.dart';
+import './member.dart';
 
 void main() => runApp(MyApp());
 
@@ -46,6 +46,7 @@ class _MyHomePageStateState extends State<MyHomePageState> with SingleTickerProv
     member.add(Member(name: '이종원차장님', myTeam: '우리팀', imagePath: 'image/chajangnum.png'));
     member.add(Member(name: '윤경환과장님', myTeam: '우리팀', imagePath: 'image/yoonguazhang.png'));
     member.add(Member(name: '이재황대리님', myTeam: '우리팀', imagePath: 'image/leejaehwangDealinim.png'));
+    print('main.dart쪽의 member = $member');
   }
   //소멸시키는놈
   @override
@@ -59,7 +60,8 @@ class _MyHomePageStateState extends State<MyHomePageState> with SingleTickerProv
   Widget build(BuildContext context) {
     return Scaffold(
       body: TabBarView( //요놈이으면 슬라이스로가능
-        children: <Widget>[ImageWidgetApp(),SecondApp(),ThreeApp()],
+        //여기서매개변수안넣으면터짐
+        children: <Widget>[ImageWidgetApp(),SecondApp(list:member),ThreeApp()],
         //ThreeApp()
         controller: controller,
       ),

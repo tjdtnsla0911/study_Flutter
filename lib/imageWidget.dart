@@ -21,6 +21,7 @@ class _ImageWidgetAppState extends State<ImageWidgetApp> {
 
 
 
+
   String num = '';
   String sum = '';
 
@@ -82,10 +83,23 @@ class _ImageWidgetAppState extends State<ImageWidgetApp> {
             mainAxisAlignment: MainAxisAlignment.center,
           ),
     ), //애가있어야 actions에서 아이콘도생기고 옆으로도움직여짐
-
+      
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: (){
+          
+          GestureDetector( //alert창을 띄우기위해선요놈이필요
+            onTap: (){
+              AlertDialog dialog = AlertDialog(
+                content: Text(
+                  '이곳도 기능구현중',
+                  style: TextStyle(fontSize: 30.0,
+                      color: Colors.indigo),
+                ),
+              );
+              showDialog(context: context, builder: (BuildContext context) => dialog);
+            },
+          );
           print('버튼클릭');
         },
       ),
