@@ -2,10 +2,11 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'member.dart';
 
 class ImageWidgetApp extends StatefulWidget {
 
-  const ImageWidgetApp({Key key}) : super(key: key);
+  // const ImageWidgetApp({Key key}) : super(key: key);
 
   static const String _title = 'Widget Example';
 
@@ -17,6 +18,9 @@ class ImageWidgetApp extends StatefulWidget {
 }
 
 class _ImageWidgetAppState extends State<ImageWidgetApp> {
+
+
+
   String num = '';
   String sum = '';
 
@@ -68,7 +72,7 @@ class _ImageWidgetAppState extends State<ImageWidgetApp> {
        //      print('onTap추가');
        //    },
        //    child: Icon(Icons.menu,), // 메뉴버튼추가 ( Appbar)
-       //       
+       //
        // ),
 
       ), drawer: Drawer(
@@ -85,7 +89,7 @@ class _ImageWidgetAppState extends State<ImageWidgetApp> {
           print('버튼클릭');
         },
       ),
-      
+
       body: Container(
         child: Center(
           // child: Card(
@@ -120,7 +124,7 @@ class _ImageWidgetAppState extends State<ImageWidgetApp> {
                 padding: EdgeInsets.only(right: 20, left: 20),
 
                 child: TextField(keyboardType: TextInputType.number,controller: value2,
-                    
+
                     decoration: InputDecoration(
 
                       border: OutlineInputBorder(),
