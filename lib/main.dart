@@ -35,7 +35,6 @@ class _MyHomePageStateState extends State<MyHomePageState> with SingleTickerProv
   List<Member> member = List();
 
 
-
   @override
   void initState()  {
     print('initState호출');
